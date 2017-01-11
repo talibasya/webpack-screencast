@@ -21,5 +21,25 @@ const webpack = require('webpack');
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV)
     })
-   ]
+  ],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      loader: 'babel',
+      query: {
+        presets: [ 'es2015' ]
+      }
+    }]
+  },
+
+  resolve: {
+    modulesDirectories: ['node_modules'],
+    extention: ['', '.js']
+  },
+
+  resolveLoader: {
+    modulesDirectories: ['node_modules'],
+    moduleTemplates: ['*-loader', '*'],
+    extentions: ['', '.js']
+  }
  }
