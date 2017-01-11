@@ -10,3 +10,5 @@ Get method from static html file
 You can modify `watchOptions` properties.
 ## 5 simple deploy - source maps
 Describe `devtool` property.
+## 6 simple deploy - variable NODE_ENV
+Get variable `NODE_ENV` and add plugin `EnvironmentPlugin` from `webpack` package.

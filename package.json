@@ -1,0 +1,23 @@
+{
+  "name": "webpack-screencast",
+  "version": "1.0.0",
+  "description": "Video tutorial how to use **webpack** package. ## 2 simple deploy Create first project, add global package `webpack` and add config file. `webpack --help` - show list arguments (the same setting are in config, so you can use config file for setup **webpack**). ## 3 simple deploy - get access to module Get method from static html file ## 4 simple deploy - rebuild `watch` property in config file will check changes in source. You can modify `watchOptions` properties. ## 5 simple deploy - source maps Describe `devtool` property.",
+  "main": "build.js",
+  "dependencies": {
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talibasya/webpack-screencast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talibasya/webpack-screencast/issues"
+  },
+  "homepage": "https://github.com/talibasya/webpack-screencast#readme"
+}
