@@ -5,5 +5,6 @@
    output: {
     //  path: __dirname + '/dist',
      filename: 'build.js',
+     library: "home"
    }
  }
