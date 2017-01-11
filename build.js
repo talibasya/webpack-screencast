@@ -50,7 +50,6 @@ var home =
 	let welcome = __webpack_require__(1);
 
 	welcome('home');
-
 	exports.welcome = welcome;
 
 
