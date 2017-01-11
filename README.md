@@ -8,3 +8,5 @@ Get method from static html file
 ## 4 simple deploy - rebuild
 `watch` property in config file will check changes in source.
 You can modify `watchOptions` properties.
+## 5 simple deploy - source maps
+Describe `devtool` property.

@@ -10,5 +10,7 @@
    watch: true,
    watchOptions: {
      aggregateTimeout: 200 // defalut 300
-   }
+   },
+
+   devtool: "cheap-inline-module-source-map" // "inline-source-map" // 'source-map'
  }
