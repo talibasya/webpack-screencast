@@ -25,3 +25,5 @@ Have to find how `babel-runtime` as plugin works in **webpack**.
 ## 8 simple deploy - resolving
 Add two parameters `resolve` and `resolveLoader`. They are rules how to seek modules, loaders.
 `resolve.alias` - find module using specific path.
+## 9 simple deploy - minification
+Add minification plugin for `production` type.
