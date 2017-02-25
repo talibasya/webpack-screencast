@@ -4,7 +4,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
  module.exports = {
-   context: __dirname + '/frontend'
+   context: __dirname + '/frontend',
    entry: {
      home: './home',
      about: './about'
@@ -22,6 +22,7 @@ const webpack = require('webpack');
    devtool: NODE_ENV === 'development' ? "cheap-inline-module-source-map" : null, // "inline-source-map" // 'source-map'
    plugins: [
     //  new webpack.EnvironmentPlugin('NODE_ENV', 'USER')
+    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV)
     })

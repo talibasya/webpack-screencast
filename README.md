@@ -33,3 +33,5 @@ Update `webpack.config.js` file:
 - `entry`  - change with array;
 - `output` - set template for output files.
 - `context` - set directory as default for webpack urls
+## 11 several scripts - noErrorsPlugin
+Add `noErrorsPlugin` to the project. It is essential for deploy. When `webpack` shows any error, it forbids deploy break files.  
