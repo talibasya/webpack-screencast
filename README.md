@@ -34,4 +34,6 @@ Update `webpack.config.js` file:
 - `output` - set template for output files.
 - `context` - set directory as default for webpack urls
 ## 11 several scripts - noErrorsPlugin
-Add `noErrorsPlugin` to the project. It is essential for deploy. When `webpack` shows any error, it forbids deploy break files.  
+Add `noErrorsPlugin` to the project. It is essential for deploy. When `webpack` shows any error, it forbids deploy break files.
+## 12 several scripts - CommonsChunkPlugin
+`CommonsChunkPlugin` helps deploy scripts without double code for each module. The final files will include same modules from one file, not in own content.  
