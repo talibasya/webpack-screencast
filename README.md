@@ -37,3 +37,11 @@ Update `webpack.config.js` file:
 Add `noErrorsPlugin` to the project. It is essential for deploy. When `webpack` shows any error, it forbids deploy break files.
 ## 12 several scripts - CommonsChunkPlugin
 `CommonsChunkPlugin` helps deploy scripts without double code for each module. The final files will include same modules from one file, not in own content.  
+## 13 several scripts - about a build.
+Command `webpack --display-modules` show paths where deployed files.
+More details: `webpack --display-modules -v`
+Create json file with information about build:
+  1. `webpack --json --profile>stats.json`
+  2. go to webpack.github.io/analyze and attach ur `stats.json` file
+  3. Will see detail info about project, sturcture, packages, dependencies etc
+  
