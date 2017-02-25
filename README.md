@@ -27,3 +27,9 @@ Add two parameters `resolve` and `resolveLoader`. They are rules how to seek mod
 `resolve.alias` - find module using specific path.
 ## 9 simple deploy - minification
 Add minification plugin for `production` type.
+## 10 several scripts - several endpoints
+Proper configure files and set their position on work directory.
+Update `webpack.config.js` file:
+- `entry`  - change with array;
+- `output` - set template for output files.
+- `context` - set directory as default for webpack urls
