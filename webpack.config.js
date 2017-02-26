@@ -7,7 +7,8 @@ const webpack = require('webpack');
    context: __dirname + '/frontend',
    entry: {
      home: './home',
-     about: './about'
+     about: './about',
+     common: './common'
    },
    output: {
      path: __dirname + '/public',
@@ -27,7 +28,12 @@ const webpack = require('webpack');
       NODE_ENV: JSON.stringify(NODE_ENV)
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common'
+      name: 'common',
+      chunks: ['about', 'home']
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common-goods',
+      chunks: ['shop', 'order']
     })
   ],
   module: {

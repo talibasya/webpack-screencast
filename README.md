@@ -44,4 +44,11 @@ Create json file with information about build:
   1. `webpack --json --profile>stats.json`
   2. go to webpack.github.io/analyze and attach ur `stats.json` file
   3. Will see detail info about project, sturcture, packages, dependencies etc
-  
+## 14 several scripts - settings for CommonsChunkPlugin.
+Prop `name` is required.
+`minChunks` - the number of repeatedly modules, which will be as one chunk. (by default the module will be as chunk, when it been included in all endpoints). Can be as function.
+`chunks` - set list files, where **webpack** seeks repeatedly scripts and makes chunks.
+See documentation. So much arguments receive this package.
+## 15 several scripts - joint code in common.js
+Create new file - `common.js`.
+put the script `alert('Hello')`. Webpack will add this code to `common.js` and this code will as common for libraries.
