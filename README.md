@@ -52,3 +52,8 @@ See documentation. So much arguments receive this package.
 ## 15 several scripts - joint code in common.js
 Create new file - `common.js`.
 put the script `alert('Hello')`. Webpack will add this code to `common.js` and this code will as common for libraries.
+## 16 several scripts - multi-compile.
+Refactor **webpack** configuration as multi builder - export config params as array:
+```javascript
+module.exports = [{}, {}, {}]
+```
