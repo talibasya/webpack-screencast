@@ -76,4 +76,7 @@ require.ensure([], function(require) {
 ## 18 advanced require - join fragments
 Join `logout` and `login` fragments as one file using third parameter for `require.ensure()`.
 Named chunks via `chunkFilename` parameter.
-You can handle number of chunks by size, count etc. See docs. 
+You can handle number of chunks by size, count etc. See docs.
+
+## 19 advanced require - conditional require
+Add folder `routes` with route and include dinamically. 
