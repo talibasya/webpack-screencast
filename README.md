@@ -63,5 +63,12 @@ module.exports = [{}, {}, {}]
 An example is in directory `dinamicReq` cause it is different of older commits.
 In this folder was implemented action, which load new file dinamically via `webpack`.
 There are two methods: `require.ensure([...], callback)` and `reqire(['./login'], function(login) { login() })` (AMD method - less popular).
+The next example with new feature:
+```javascript
+require.ensure([], function(require) {
+  let login = require('./login')
 
+  login()
+})
+```
 *You have to add `publicPath` parameter for this implementation.
