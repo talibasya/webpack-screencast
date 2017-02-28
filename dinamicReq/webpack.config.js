@@ -12,6 +12,7 @@ const webpack = require('webpack');
      path: __dirname + '/public/js/',
      filename: '[name].js',
      publicPath: '/js/',
+     chunkFilename: "[id].[name].js"﻿,
      library: "[name]"
    },
    watch: NODE_ENV === "development",
@@ -23,9 +24,9 @@ const webpack = require('webpack');
    plugins: [
     //  new webpack.EnvironmentPlugin('NODE_ENV', 'USER')
     new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(NODE_ENV)
-    })
+    // new webpack.DefinePlugin({
+    //   NODE_ENV: JSON.stringify(NODE_ENV)
+    // })
   ],
  }
 

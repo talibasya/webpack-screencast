@@ -71,4 +71,9 @@ require.ensure([], function(require) {
   login()
 })
 ```
-*You have to add `publicPath` parameter for this implementation.
+*You have to add `publicPath` parameter for this implementation*
+
+## 18 advanced require - join fragments
+Join `logout` and `login` fragments as one file using third parameter for `require.ensure()`.
+Named chunks via `chunkFilename` parameter.
+You can handle number of chunks by size, count etc. See docs. 
