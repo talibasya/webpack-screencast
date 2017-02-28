@@ -33,6 +33,7 @@ Update `webpack.config.js` file:
 - `entry`  - change with array;
 - `output` - set template for output files.
 - `context` - set directory as default for webpack urls
+
 ## 11 several scripts - noErrorsPlugin
 Add `noErrorsPlugin` to the project. It is essential for deploy. When `webpack` shows any error, it forbids deploy break files.
 ## 12 several scripts - CommonsChunkPlugin
@@ -44,6 +45,7 @@ Create json file with information about build:
   1. `webpack --json --profile>stats.json`
   2. go to webpack.github.io/analyze and attach ur `stats.json` file
   3. Will see detail info about project, sturcture, packages, dependencies etc
+
 ## 14 several scripts - settings for CommonsChunkPlugin.
 Prop `name` is required.
 `minChunks` - the number of repeatedly modules, which will be as one chunk. (by default the module will be as chunk, when it been included in all endpoints). Can be as function.
@@ -57,3 +59,9 @@ Refactor **webpack** configuration as multi builder - export config params as ar
 ```javascript
 module.exports = [{}, {}, {}]
 ```
+## 17 advanced require - dinamic require
+An example is in directory `dinamicReq` cause it is different of older commits.
+In this folder was implemented action, which load new file dinamically via `webpack`.
+There are two methods: `require.ensure([...], callback)` and `reqire(['./login'], function(login) { login() })` (AMD method - less popular).
+
+*You have to add `publicPath` parameter for this implementation.
