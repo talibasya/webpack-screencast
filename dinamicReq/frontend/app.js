@@ -19,5 +19,15 @@ document.getElementById('logoutButton').onclick = function () {
 }
 
 let moduleName = location.pathname.slice(1);
-let route = require('./routes' + moduleName );
-route()
+
+try {
+  let handler = require('bundle!./routes' + moduleName)
+} catch (e) {
+  alert('not such a file')
+}
+
+if (handler) {
+  handler(function(route) {
+    route()
+  });
+}

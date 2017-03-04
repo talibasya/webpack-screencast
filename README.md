@@ -79,4 +79,13 @@ Named chunks via `chunkFilename` parameter.
 You can handle number of chunks by size, count etc. See docs.
 
 ## 19 advanced require - conditional require
-Add folder `routes` with route and include dinamically. 
+Add folder `routes` with route and include dinamically.
+
+## 20 advanced require - require context
+Using `context` manually.
+
+## 21 advanced require - dinamic require.context
+Adding `require.ensure` to main module tells webpack that creation files will be dinamically.
+U have create wrapper for each component. In this case each page will deploy as separate file and loads during working on client side.
+It does a webpack package `bundle-loader`.
+*Can't reproduce*
