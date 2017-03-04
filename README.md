@@ -103,3 +103,8 @@ try {
 ...
 ```
 Add `ContextReplacementPlugin` and update webpack config file.
+
+## 23 advanced require - IgnorePlugin
+Exclude module from deploying by plugin `IgnorePlugin`. The arguments are regular expressions.
+Probably can be used in reversed case. (include only some packages)
+The `ignorePlugin` have specific implementation. It contains specify ways for check `require` lines. The `context` and `normal` conditional. *See source code*
