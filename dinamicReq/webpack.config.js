@@ -24,6 +24,7 @@ const webpack = require('webpack');
    plugins: [
     //  new webpack.EnvironmentPlugin('NODE_ENV', 'USER')
     new webpack.NoErrorsPlugin(),
+    new webpack.ContextReplacementPlugin(/node_modules\/moment\/locale/, /ru|en-gb/)
     // new webpack.DefinePlugin({
     //   NODE_ENV: JSON.stringify(NODE_ENV)
     // })

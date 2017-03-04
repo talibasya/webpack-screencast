@@ -89,3 +89,17 @@ Adding `require.ensure` to main module tells webpack that creation files will be
 U have create wrapper for each component. In this case each page will deploy as separate file and loads during working on client side.
 It does a webpack package `bundle-loader`.
 *Can't reproduce*
+
+## 22 advanced require - ContextReplacementPlugin
+Sometimes plugins includes own data via `context` (see desc 20/21). In this case whole package will deploy into one file and your js file takes much place (example in the source).
+To avoid that u can use `ContextReplacementPlugin` and exclude some files from deploying. *file has been required via reg. expression as in 20,21 casts*
+moment.js source:
+```javascript
+...
+try {
+  oldlocale = globallocate._abbr;
+  require('./locale/' + name)
+}
+...
+```
+Add `ContextReplacementPlugin` and update webpack config file.

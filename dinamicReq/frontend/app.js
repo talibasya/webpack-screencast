@@ -18,16 +18,7 @@ document.getElementById('logoutButton').onclick = function () {
 
 }
 
-let moduleName = location.pathname.slice(1);
+let moment = require('moment')
+let today = moment(new Date()).locale('ru')
 
-try {
-  let handler = require('bundle!./routes' + moduleName)
-} catch (e) {
-  alert('not such a file')
-}
-
-if (handler) {
-  handler(function(route) {
-    route()
-  });
-}
+alert(today.format('DD MMMM YYYY'))
