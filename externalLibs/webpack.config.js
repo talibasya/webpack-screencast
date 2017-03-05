@@ -19,11 +19,11 @@ const webpack = require('webpack');
 
    devtool: NODE_ENV === 'development' ? "cheap-inline-module-source-map" : null, // "inline-source-map" // 'source-map'
    plugins: [
+     new webpack.ProvidePlugin({
+       lodashCollectionSortBy: 'lodash/sortBy'
+     })
   ],
 
-  externals: {
-    lodash: '_'
-  }
  }
 
  if (NODE_ENV == 'production') {

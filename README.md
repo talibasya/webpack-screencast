@@ -112,3 +112,7 @@ The `ignorePlugin` have specific implementation. It contains specify ways for ch
 ## 24 external libraries - CDN and building
 Was created a new `externalLibs` folder and implemented this cast.
 Add external library as `lodash` via CDN and include to webpack building.
+
+## 25 external libraries - local ProvidePlugin
+Set variables as global from webpack config using `ProvidePlugin`.
+*deprecated see docs*
