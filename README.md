@@ -108,3 +108,7 @@ Add `ContextReplacementPlugin` and update webpack config file.
 Exclude module from deploying by plugin `IgnorePlugin`. The arguments are regular expressions.
 Probably can be used in reversed case. (include only some packages)
 The `ignorePlugin` have specific implementation. It contains specify ways for check `require` lines. The `context` and `normal` conditional. *See source code*
+
+## 24 external libraries - CDN and building
+Was created a new `externalLibs` folder and implemented this cast.
+Add external library as `lodash` via CDN and include to webpack building.
