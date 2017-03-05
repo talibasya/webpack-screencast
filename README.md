@@ -116,3 +116,17 @@ Add external library as `lodash` via CDN and include to webpack building.
 ## 25 external libraries - local ProvidePlugin
 Set variables as global from webpack config using `ProvidePlugin`.
 *deprecated see docs*
+
+## 26 external libraries - optimize noParse include
+Deploying takes much time. Have to optimize `webpack`. The first is see more details about `webpack` deploying:
+```
+webpack --profile --display-modules --display-reasons
+```
+Will showed library and taked time for deploying.  **Total: 2.4 sec**.
+Add `exclude` property for `babel-loader`, which contains `node_modules` directory. **Total: 782 msec**
+Add `noParse` property to `webpack.config` file. **Total: 397msec**
+Put value to `noParse` for whole `nod_modules` directory:
+```javascript
+noParse: /\/node_modules\/[^!]+$/
+noParse: /\/node_modules\/(angular\/angular|jquery|...)/
+```

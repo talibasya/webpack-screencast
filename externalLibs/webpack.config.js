@@ -19,11 +19,19 @@ const webpack = require('webpack');
 
    devtool: NODE_ENV === 'development' ? "cheap-inline-module-source-map" : null, // "inline-source-map" // 'source-map'
    plugins: [
-     new webpack.ProvidePlugin({
-       lodashCollectionSortBy: 'lodash/sortBy'
-     })
   ],
 
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      // exclude: /\/node_modules\//,
+      include: __dirname + '/frontend', // will perform only thess files
+      loader: 'babel-loader'
+    }],
+
+    noParse: /angular\/angular\.js/
+
+  },
  }
 
  if (NODE_ENV == 'production') {
