@@ -130,3 +130,8 @@ Put value to `noParse` for whole `nod_modules` directory:
 noParse: /\/node_modules\/[^!]+$/
 noParse: /\/node_modules\/(angular\/angular|jquery|...)/
 ```
+
+## 27 external libraries - old scripts: paths and import/export
+Add `vendor` directory with old scripts.
+Add `resolve` param for `webpack`, which helps with *require* paths. More readable style.
+Include to project old scripts (with global functions, variables) to own project using `exports-loader` and `imports-loader`

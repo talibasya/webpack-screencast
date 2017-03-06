@@ -27,11 +27,19 @@ const webpack = require('webpack');
       // exclude: /\/node_modules\//,
       include: __dirname + '/frontend', // will perform only thess files
       loader: 'babel-loader'
+    }, {
+      test: /old\.js$/,
+      loader: 'imports-loader?workSettins=>{delay:500}!exports-loader?Work'
     }],
-
     noParse: /angular\/angular\.js/
-
   },
+
+  resolve: {
+    modules: [__dirname + '/vendor'],
+    alias: {
+        old: 'old/dist/old'
+    }
+  }
  }
 
  if (NODE_ENV == 'production') {
