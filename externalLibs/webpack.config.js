@@ -29,7 +29,7 @@ const webpack = require('webpack');
       loader: 'babel-loader'
     }, {
       test: /old\.js$/,
-      loader: 'imports-loader?workSettins=>{delay:500}!exports-loader?Work'
+      loader: 'expose-loader?Work2!imports-loader?workSettings=>{delay:500}!exports-loader?Work'
     }],
     noParse: /angular\/angular\.js/
   },

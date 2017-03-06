@@ -135,3 +135,7 @@ noParse: /\/node_modules\/(angular\/angular|jquery|...)/
 Add `vendor` directory with old scripts.
 Add `resolve` param for `webpack`, which helps with *require* paths. More readable style.
 Include to project old scripts (with global functions, variables) to own project using `exports-loader` and `imports-loader`
+
+## 28 external libraries - expose and script-loader
+`expose` - loader writes exports modules to global variable.
+`script-loader` - strange thing. Makes string from the script and run via `eval`.

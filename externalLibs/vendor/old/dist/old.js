@@ -1,5 +1,5 @@
 function Work() {
-  setTimout(function() {
+  setTimeout(function() {
     alert('work complete')
-  }, workSetting.delay)
+  }, workSettings.delay)
 }
